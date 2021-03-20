@@ -1,0 +1,21 @@
+#!/bin/python3.7
+# imported a module called random to generate the random password 
+import random 
+
+# Characters to create the random password
+chars="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-=_+ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#Taking user input
+length = input('password length: ')
+passlength = input('Number of passwords: ')
+
+#Converting the user input to the whole number 
+length = int(length)
+passlength = int(passlength)
+
+#Using for loop create 3 passwords for the user to choose
+for p in range(passlength):
+    password=""
+    for c in range(length):
+        password += random.choice(chars)
+    print(password)
